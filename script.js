@@ -90,35 +90,35 @@ function startQuiz() {
         let area = document.getElementById("interactiveArea");
         area.innerHTML = "<h3>¡Acá está tu regalo!</h3>";
         
-        // Añadir el carrusel de fotos aquí
+      // Mostrar el mensaje final con los cuadrados redondeados
+    function showFinalMessage() {
+        let area = document.getElementById("interactiveArea");
+        area.innerHTML = "<h3>¡Acá está tu regalo!</h3>";
+        
+        // Añadir los cuadrados medio redondeados aquí
         area.innerHTML += `
-        <div class="carousel">
-            <div class="carousel-images">
-                <img src="img/cup1.jpg" alt="Imagen 1">
-                <img src="img/cup2.jpg" alt="Imagen 2">
-                <img src="img/cup3.jpg" alt="Imagen 3">
-                <img src="img/cup4.jpg" alt="Imagen 4">
-                <img src="img/cup5.jpg" alt="Imagen 5">
-                
-            </div>
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
+        <div class="gift-grid">
+            <div class="gift-square">Besitos</div>
+            <div class="gift-square">Una cita</div>
+            <div class="gift-square">Una película</div>
+            <div class="gift-square">Flores</div>
+            <div class="gift-square">Masajes</div>
+            <div class="gift-square">Todo</div>
         </div>
         `;
-    
-        
-        // Añadir los controladores de eventos para el carrusel
-        document.querySelector('.next').addEventListener('click', () => {
-            index++;
-            showImage(index);
-        });
-    
-        document.querySelector('.prev').addEventListener('click', () => {
-            index--;
-            showImage(index);
+
+        // Añadir evento click a cada cuadrado para mostrar el aviso
+        document.querySelectorAll('.gift-square').forEach(square => {
+            square.addEventListener('click', function() {
+                alert("Puede canjear su regalo en @mellomanias");
+            });
         });
     }
     
+    // Inicia el cuestionario
+    showQuestion();
+}
+
     // Inicia el cuestionario
     showQuestion();
 }
