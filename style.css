@@ -1,0 +1,123 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e2e8f3; /* Azul muy claro */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ffffff; /* Blanco */
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+}
+
+h2, h3 {
+    margin: 20px 0;
+    color: #486f99; /* Azul oscuro */
+    font-family: 'Suez One', serif;
+}
+
+button {
+    border-radius: 25px;
+    width: 160px;
+    height: 50px;
+    font-size: 16px;
+    background-color: #688db9; /* Azul medio */
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+button:hover {
+    background-color: #486f99; /* Azul oscuro */
+}
+
+.optionButton {
+    border-radius: 15px;
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    background-color: #c4d2e7; /* Azul claro */
+    color: #333333;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.optionButton:hover {
+    background-color: #688db9; /* Azul medio */
+}
+
+/* Estilo para el Carrusel de Fotos */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    max-width: 600px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #486f99; /* Azul oscuro */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1000;
+}
+
+.prev {
+    left: -50px; /* Coloca el botón fuera del área de la imagen a la izquierda */
+}
+
+.next {
+    right: -50px; /* Coloca el botón fuera del área de la imagen a la derecha */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.spotify-widget {
+    position: fixed; /* Fijo en la pantalla */
+    bottom: 20px; /* Espacio desde el fondo de la página */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translateX(-50%); /* Ajustar el centro horizontal */
+    background-color: #ffffff; /* Fondo blanco (opcional) */
+    border-radius: 10px; /* Bordes redondeados (opcional) */
+    padding: 10px; /* Espaciado interno (opcional) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra (opcional) */
+    z-index: 1000; /* Asegúrate de que esté encima de otros elementos */
+}
+
+.spotify-widget iframe {
+    width: 300px; /* Ancho del widget */
+    height: 80px; /* Altura del widget */
+    border: none; /* Quita el borde */
+    border-radius: 5px; /* Bordes redondeados (opcional) */
+}
